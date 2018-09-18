@@ -7,7 +7,7 @@ clientPort = 50006              # Arbitrary non-privileged port
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((clientHost, clientPort))
 s.listen(1)              # allow only one outstanding request
-# s is not a factory for connected sockets
+# s is a factory for connected sockets
 
 conn, addr = s.accept()  # wait until incoming connection request (and accept it)
 print 'Connected by', addr
